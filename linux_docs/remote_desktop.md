@@ -45,13 +45,13 @@
     vi /opt/google/chrome-remote-desktop/chrome-remote-desktop
     ```
     
-    a. Find `DEFAULT_SIZES` and update to the remote desktop resolution. For example:
+    A. `DEFAULT_SIZES`: update the remote desktop resolution. For example:
     
         ```
         DEFAULT_SIZES = "1920x1080"
         ```
     
-    b. `FIRST_X_DISPLAY_NUMBER`: determine main display number (obtain it with `echo $DISPLAY` from terminal) and set the `FIRST_X_DISPLAY_NUMBER` to the display number (Ubuntu 17.10 and lower: usually 0, Ubuntu 18.04: usually 1)
+    B. `FIRST_X_DISPLAY_NUMBER`: determine main display number (obtain it with `echo $DISPLAY` from terminal) and set the `FIRST_X_DISPLAY_NUMBER` to the display number (Ubuntu 17.10 and lower: usually 0, Ubuntu 18.04: usually 1)
         
         ```console
         echo $DISPLAY
@@ -60,14 +60,14 @@
         ```
         FIRST_X_DISPLAY_NUMBER = 0
         ```
-    c. Comment out sections that look for additional displays:
+    C. Comment out sections that look for additional displays:
 
         ```
         #while os.path.exists(X_LOCK_FILE_TEMPLATE % display):
         #  display += 1
         ```
     
-    d. `launch_session()`: reuse the existing X session (instead of launching new one) by commenting out `launch_x_server()` and `launch_x_session()` within `launch_session()`. The function definition should look like the following:
+    D. `launch_session()`: reuse the existing X session (instead of launching new one) by commenting out `launch_x_server()` and `launch_x_session()` within `launch_session()`. The function definition should look like the following:
     
         ```
         def launch_session(self, x_args):
