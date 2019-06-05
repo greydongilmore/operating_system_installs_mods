@@ -2,9 +2,9 @@
 1. Download your own icon image
 2. Find path to the executable of your pplication by running (replace brackets with name of applicaion):
 
-```console
-which [name_application]
-```
+      ```console
+      which [name_application]
+      ```
 Copy the path from this output.
 
 3. Run the command:
