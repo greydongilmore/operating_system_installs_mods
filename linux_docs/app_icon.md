@@ -37,6 +37,6 @@ Copy the path from this output.
 
 7. Finally, move this file to the desktop launcher path on your system:
 
-```console
-sudo mv /Desktop/*[name_of_file]* /usr/share/applications/
-```
+      ```console
+      sudo mv /Desktop/*[name_of_file]* /usr/share/applications/
+      ```
