@@ -10,8 +10,8 @@ Restart your computer when prompted.
 
 ## Download the linux distro
 1. Open the Microsoft Store and choose your favorite Linux distribution by searching for them (I prefer Ubuntu):
-- [Ubuntu](https://www.microsoft.com/en-ca/p/ubuntu/9nblggh4msv6?rtc=1&activetab=pivot:overviewtab)
-- [Debian](https://www.microsoft.com/en-ca/p/debian/9msvkqc78pk6?rtc=1&activetab=pivot:overviewtab)
+  - [Ubuntu](https://www.microsoft.com/en-ca/p/ubuntu/9nblggh4msv6?rtc=1&activetab=pivot:overviewtab)
+  - [Debian](https://www.microsoft.com/en-ca/p/debian/9msvkqc78pk6?rtc=1&activetab=pivot:overviewtab)
 
 2. From the distro's page, select "Get".
 
