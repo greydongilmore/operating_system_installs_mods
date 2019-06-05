@@ -1,13 +1,14 @@
-# DCM2NIIX
-## Install
+# Dcm2niix
 
-Simple run the following code:
+## Run Install
+
+Run the following code in a linux terminal:
 
 ```console
 sudo apt-get install dcm2niix
 ```
 
-## Install dependencies
+## Install Dependencies
 
 There are a few packages that allow dcm2niix to run faster:
 
