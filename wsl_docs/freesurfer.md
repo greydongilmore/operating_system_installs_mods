@@ -1,6 +1,8 @@
-# Freesurfer
+# Freesurfer Installation
+
 ## Download software
-Download the linux software version from [here](https://surfer.nmr.mgh.harvard.edu/pub/dist/freesurfer/6.0.0/freesurfer-Linux-centos6_x86_64-stable-pub-v6.0.0.tar.gz)
+
+Download the [linux software version](https://surfer.nmr.mgh.harvard.edu/pub/dist/freesurfer/6.0.0/freesurfer-Linux-centos6_x86_64-stable-pub-v6.0.0.tar.gz).
 
 Run the following command:
 
@@ -8,18 +10,17 @@ Run the following command:
 sudo tar -C /usr/local -xzvf /mnt/c/Users/*[your_username]*/Downloads/freesurfer-Linux-centos6_x86_64-stable-pub-v6.0.0.tar.gz
 ```
 
-You will also need to install tcsh:
+You will also need to install some dependancies:
 
 ```console
 sudo apt-get install tcsh
-```
-
-```console
 sudo apt-get install libglu1
 sudo apt-get install libxss1
 ```
 
-You will then need to add Freesurfer to your path:
+## Post-Install Configurations
+
+Add Freesurfer to your path:
 
 ```console
 echo "FREESURFER_HOME=/usr/local/freesurfer" >> ~/.bashrc
@@ -38,6 +39,7 @@ MNI_DIR         /usr/local/freesurfer/mni
 ```
 
 ## Define subjects_dir
+
 FreeSurfer requires an environment variable called ```SUBJECTS_DIR```. This is the directory where subject data is stored.
 
 ```console
@@ -45,12 +47,11 @@ export SUBJECTS_DIR=<path to subject data>
 ```
 
 ## Obtain license
-You will need to obtain a license key from [here](https://surfer.nmr.mgh.harvard.edu/registration.html)
 
-Once you obtain the license.txt key file, copy it to your FreeSurfer installation directory. This is also the location defined by the FREESURFER_HOME environment variable.
+You will need to obtain a [license key](https://surfer.nmr.mgh.harvard.edu/registration.html).
+
+Once you obtain the `license.txt` key file, copy it to your FreeSurfer installation directory. This is also the location defined by the `FREESURFER_HOME` environment variable.
 
 ```console
 sudo mv /mnt/c/Users/*[your_username]*/Downloads/license.txt $FREESURFER_HOME
 ```
-
-
