@@ -28,7 +28,7 @@ Try launching Terminator by specifying the X Display to connect to (:0) in the l
 DISPLAY=:0 terminator &
 ```
 
-If you receive an error about D-Bus then press `CTRL+C` to abort the previosu command and run the following:
+If you receive an error about D-Bus (```No D-BUS daemon running```) then press `CTRL+C` to abort the previous command and run the following:
 
 ```console
 sudo apt-get install dbus-x11
@@ -162,12 +162,3 @@ To change the opening size of the terminal window add the variable ```size``` un
 ```
 
 Close terminator and re-open.
-
-## Common Error Messages
-
-You may experience an error ```No D-BUS daemon running```, you can do the following:
-
-```console
-sudo sed -i 's$<listen>.*</listen>$<listen>tcp:host=localhost,port=0</listen>$' /etc/dbus-1/session.conf
-```
-
