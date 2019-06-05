@@ -8,10 +8,12 @@
 6. [Automatic Registration Toolbox (ART)](wsl_docs/ART.md)
 7. [FMRIB Software Library (FSL)](wsl_docs/fsl.md)
 8. [Dcm2niix](wsl_docs/dcm2niix.md)
+9. [Freesurfer](wsl_docs/freesurfer.md)
 
 # Ubuntu 18.04
 
 1. [Adding custom applications launch icon to favorites](linux_docs/app_icon.md)
+2. [Google Remote Desktop](linux_docs/remote_desktop.md)
 
 # Windows 10
 
