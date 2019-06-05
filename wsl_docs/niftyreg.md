@@ -1,5 +1,7 @@
 # NiftyReg Install
+
 ## Download NiftyReg
+
 Obtain the newest version of [NiftyReg](https://sourceforge.net/projects/niftyreg/files/latest/download) or by running the following:
 
 ```console
@@ -8,7 +10,8 @@ cd ~/code/niftyreg_source
 git clone https://github.com/SuperElastix/niftyreg.git
 ```
 
-## Run CMAKE/MAKE
+## Run CMake/Make
+
 Make the build and install directories. 
 
 The default install location is ```/usr/local```, which falls on your PATH. This is the easiest location to install. If you want to install somwhere else then specify the path in the ```CMAKE_INSTALL_PREFIX``` variable.
@@ -42,10 +45,11 @@ sudo make
 sudo make install
 ```
 
-## Postinstall configuration
+## Post-Install Configuration
+
 The project should then be installed into the ```CMAKE_INSTALL_PREFIX``` directory you previously created. 
 
-If you chnaged in install prefix directory you will need to add NiftyReg to your PATH. In order to use NiftyReg in any terminal, you will need to edit your ```.bashrc``` or ```.profile``` file by adding the following lines:
+If you changed the install prefix directory, to one not on your PATH, you will need to add NiftyReg to your PATH. In order to use NiftyReg in any terminal, you will need to edit your ```.bashrc``` or ```.profile``` file by adding the following lines:
 
 ```
 NREG=<path_to_your_niftyreg_install>
@@ -53,7 +57,7 @@ export PATH={NREG}/bin:${PATH}
 export LD_LIBRARY_PATH={NREG}/lib:${LD_LIBRARY_PATH}
 ```
 
-You should then be able to open a new terminal and type:
+Close and re-open the linux terminal then run:
 
 ```console
 reg_f3d
