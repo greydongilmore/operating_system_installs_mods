@@ -14,3 +14,5 @@
 1. [Adding custom applications launch icon to favorites](linux_docs/app_icon.md)
 
 # Windows 10
+
+1. [Obtain Windows Product Key](windows_docs/product_key.md)
