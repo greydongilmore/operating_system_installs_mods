@@ -1,15 +1,16 @@
 # FMRIB Software Library
 
-Easy install by downloading this [python script](https://fsl.fmrib.ox.ac.uk/fsldownloads_registration/)
+## Download FSL
+
+The easiest method is to download this [python script](https://fsl.fmrib.ox.ac.uk/fsldownloads_registration/).
 
 You will need to register. On the subsequent page you will download the ```fslinstaller.py``` file.
 
-Run the following:
+Run the following in a linux terminal (the install will take awhile):
 
 ```console
 python /mnt/c/Users/*[your_username]*/Downloads/fslinstaller.py
 ```
-The install will take awhile.
 
 You will also need to install the package ```wxpython```:
 
@@ -31,8 +32,6 @@ pip install -U -f https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu
 sudo apt-get install libmng2
 sudo apt-get install libmng-dev
 ```
-
-You may receive a few errors about lib files, run these lines.
 
 ### PNG library - development (libpng-dev)
 
@@ -62,6 +61,7 @@ sudo apt-get install libjpeg62
 ```
 
 ### PNG library - runtime (libpng12.deb)
+
 ```console
 wget -q -O /tmp/libpng12.deb http://mirrors.kernel.org/ubuntu/pool/main/libp/libpng/libpng12-0_1.2.54-1ubuntu1_amd64.deb \
   && sudo dpkg -i /tmp/libpng12.deb \
@@ -74,7 +74,7 @@ wget -q -O /tmp/libpng12.deb http://mirrors.kernel.org/ubuntu/pool/main/libp/lib
 sudo apt-get install gtk2.0
 ```
 
-## May need pulseaudio for other random libraries
+## Pulseaudio for other random libraries
 
 ```console
 sudo apt-get install pulseaudio
