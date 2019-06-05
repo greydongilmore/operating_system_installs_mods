@@ -1,5 +1,7 @@
-# Install ANTs
+# Install Advanced Normalization Tools (ANTs)
+
 ## Get the latest ANTs code
+
 Download the latest code into an arbitrary directory, I use ~/code:
 
 ```console
@@ -13,7 +15,8 @@ You will also need to install the ZLIB libraries:
 sudo apt-get install zlib1g-dev
 ```
 
-## Run CMAKE/MAKE
+## Run CMake/Make
+
 I install my applications in ```~/Applications```, however the following will install ANTs in ```~/bin```:
 
 ```console
@@ -35,7 +38,9 @@ This compiles in the most resource-efficient manner. To save time, you can use m
 ```console
 make -j 2
 ```
-## Postinstall Configuration
+
+## Post-install Configuration
+
 If you want to use ANTs scripts, copy them from the source directory ```Scripts/``` to the bin directory where ```antsRegistration``` etc are located:
 
 ```console
