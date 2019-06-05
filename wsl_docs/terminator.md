@@ -66,19 +66,20 @@ ZSH_THEME="ys"
 
 If you have never used `vi` editor before, you will need to press the `i` key to enter inout mode to make changes. Once you have made the change you will need to exit input mode by pressing `esc`. In order to exit the editor and save you need to press `:` followed by `wq` to exit the editor with save.
 
-The only problem with Bash in WSL is it will always run Bash instead of Zsh. To get around that, add this to the end of your `.bashrc` which will launch zsh instead when it starts up:
+The only problem with Bash in WSL is it will always run Bash instead of Zsh. To get around that, add this to the end of your `~/.bashrc` which will launch zsh instead when it starts up:
 
 ```console
 vi ~/.bashrc
 ```
 
-```console
+```
 if [ -t 1 ]; then
   exec zsh
 fi
 ```
 
 ## Terminator Colorscheme
+
 The next thing is to change the default Terminator colorscheme to Solarized Dark. The easiest way to do this, is to use the awesome node package [base16-builder](https://github.com/base16-builder/base16-builder). You need to first install Node.js:
 
 ```console
@@ -96,6 +97,7 @@ base16-builder -s solarized -t terminator -b dark > .config/terminator/config
 ```
 
 ## Dircolors
+
 To change the dircolors you can use [Solarized dircolors](https://github.com/seebi/dircolors-solarized) on Github and downloaded them to ```.dir_colors```:
 
 ```console
@@ -103,7 +105,7 @@ wget https://raw.githubusercontent.com/seebi/dircolors-solarized/master/dircolor
 mv dircolors.256dark .dir_colors
 ```
 
-Then lastly, added this to your ```.zshrc``` to eval the Solarized dircolors on startup:
+Finally, added this to your ```.zshrc``` to eval the Solarized dircolors on startup:
 
 ```console
 if [ -f ~/.dir_colors ]; then
@@ -138,17 +140,26 @@ In the 'Start in' field type:
 It's impossible to have Termiator start in your Linux home directory through this method since that path is not "known" to Windows. To get around it, add this to your .zshrc so it CD's to your home directory on startup:
 
 ```console
+vi ~/.zshrc
+```
+
+```
 if [ -t 1 ]; then
   cd ~
 fi
 ```
 
 ## Other customizations
+
 If you want to further modify your terminator theme you can add lines to the file ```~/.config/terminator/config```.
 
 To change the opening size of the terminal window add the variable ```size``` under layouts:
 
 ```console
+vi ~/.config/terminator/config
+```
+
+```
 [layouts]
   [[default]]
     [[[child1]]]
