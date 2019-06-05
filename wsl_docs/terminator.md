@@ -44,6 +44,7 @@ DISPLAY=:0 terminator &
 A nice Terminator window should pop up.
 
 ## Installing Zsh
+
 The next step is to install Zsh with oh-my-zsh. Installation is straightfoward:
 
 ```console
@@ -52,15 +53,13 @@ curl -L https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/in
 ```
 You may receive a message `Password: chsh: PAM: Authentication failure` you can ignore this.
 
-You can set the theme to "ys" in ```.zshrc```:
+Set the theme to "ys" at line 11 by replacing `robbyrussell` in ```.zshrc```:
 
 ```console
 vi ~/.zshrc
 ```
 
-At line 11 change theme from `robbyrussell` to:
-
-```console
+```
 ZSH_THEME="ys"
 ```
 
