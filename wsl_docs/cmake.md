@@ -1,7 +1,8 @@
-# Make and Cmake install
+# Make and CMake Installation
+
 ## Install Make
 
-Install build essentials and make first:
+Install build essentials and Make first:
 
 ```console
 sudo apt-get install make
@@ -9,7 +10,7 @@ sudo apt-get update && sudo apt-get install build-essential
 ```
 
 ## Install CMake
-Download the latest version of the cmake executable [here](https://github.com/Kitware/CMake/releases/download/v3.13.3/cmake-3.13.3-Linux-x86_64.sh). 
+Download the latest version of the [CMake executable](https://github.com/Kitware/CMake/releases/download/v3.13.3/cmake-3.13.3-Linux-x86_64.sh). 
 
 In your linux shell run:
 
