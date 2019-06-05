@@ -23,9 +23,9 @@ Restart your computer when prompted.
 
 6. Most distros ship with an empty/minimal package catalog. I strongly recommend regularly updating your package catalog, and upgrading your installed packages using your distro's preferred package manager.
 
-```console
-sudo apt update && sudo apt upgrade
-```
+      ```console
+      sudo apt update && sudo apt upgrade
+      ```
 
 ## Add link to the linux subsystem in Windows Quick Access
 Depending on the version of linux you installed, the absolute path will be found either:
