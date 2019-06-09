@@ -7,19 +7,13 @@
       ```
 Copy the path from this output.
 
-3. Create the `.desktop` file for the application by running the command (remember to edit the application name):
+3. Create\edit the `.desktop` file for the application by running the command (remember to edit the application name):
 
       ```console
-      sudo touch Desktop/[name_application].desktop
+      gedit Desktop/[name_application].desktop
       ```
-
-4. Edit the file:
-
-      ```console
-      sudo vim Desktop/[name_application].desktop
-      ```
-
-5. Add the following lines (replace the items in square brackets with your respect application) and save the file with the extension `.desktop` (e.g. `[application name].desktop`):
+      
+4. Add the following lines (replace the items in square brackets with your respect application) and save the file with the extension `.desktop` (e.g. `[application name].desktop`):
 
       ```
       #!/usr/bin/env xdg-open
@@ -33,9 +27,9 @@ Copy the path from this output.
       Categories=Development
       ```
 
-6. Right click on the file (should now be on your desktop), select properties, then permissions and select `Allow executing file as program`
+5. Right click on the file (should now be on your desktop), select properties, then permissions and select `Allow executing file as program`
 
-7. Finally, move this file to the desktop launcher path on your system:
+6. Finally, move this file to the desktop launcher path on your system:
 
       ```console
       sudo mv /Desktop/*[name_of_file]* /usr/share/applications/
