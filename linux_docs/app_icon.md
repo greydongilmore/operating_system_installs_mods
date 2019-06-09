@@ -1,22 +1,22 @@
 # Adding application launch icon to favorites
 1. Download your own icon image
-2. Find path to the executable of your pplication by running (replace brackets with name of applicaion):
+2. Find path to the executable of your application by running (replace brackets with name of applicaion):
 
       ```console
       which [name_application]
       ```
 Copy the path from this output.
 
-3. Run the command:
+3. Create the `.desktop` file for the application by running the command (remember to edit the application name):
 
       ```console
-      sudo touch /usr/**[user_name]**/Desktop/matlab.desktop
+      sudo touch Desktop/[name_application].desktop
       ```
 
 4. Edit the file:
 
       ```console
-      sudo vim /usr/**[user_name]**/Desktop/matlab.desktop
+      sudo vim Desktop/[name_application].desktop
       ```
 
 5. Add the following lines (replace the items in square brackets with your respect application) and save the file with the extension `.desktop` (e.g. `[application name].desktop`):
