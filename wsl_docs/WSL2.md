@@ -1,4 +1,8 @@
 # Activating Windows Linux Subsystem 2 (WSL2)
+## Sign up for Windows Insider program
+- Go to [Register for Windows Insider](https://insider.windows.com/en-us/getting-started/)
+- Sign up for Windows Insider program
+
 ## Activate Windows Insider Builds
 1. Enable Full Diagnostic Data
     - go to Settings > Privacy > Diagnostics & feedback> Diagnostic data
