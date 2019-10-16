@@ -95,6 +95,12 @@ mkdir -p .config/terminator
 base16-builder -s solarized -t terminator -b dark > .config/terminator/config
 ```
 
+You may get an error about access you need to first run this line then re-run the previous line with `base16-builder`
+
+```console
+sudo chown -R [your_username] /home/[your_username]/.config/configstore
+```
+
 ## Dircolors
 
 To change the dircolors you can use [Solarized dircolors](https://github.com/seebi/dircolors-solarized) on Github and downloaded them to ```.dir_colors```:
