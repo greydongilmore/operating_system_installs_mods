@@ -11,7 +11,7 @@
 9. [Freesurfer](wsl_docs/freesurfer.md)
 
 ## Windows
-1.  
+1. [Mount Remote Drive with SSHFS](windows_docs/windows_sshfs.md)
 2. [Obtain Windows Product Key](windows_docs/product_key.md)
 
 # Ubuntu 18.04
