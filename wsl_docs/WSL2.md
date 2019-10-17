@@ -58,14 +58,24 @@
     * [Debian](https://www.microsoft.com/en-ca/p/debian/9msvkqc78pk6?rtc=1&activetab=pivot:overviewtab)
 
 2. From the distro's page, select __Get__
+3. Once done installing, open up __Powershell__ as administrator and run (replace distro with the name of the distro you installed):
 
-3. To complete the initialization of your newly installed distro, launch a new instance by searching in the Start menu and launching the distro
+```console
+wsl --set-version [Distro] 2
+```
 
-4. The first time a newly installed distro runs, a Console window will open, and you'll be asked to wait for a minute or two for the installation to complete
+```console
+wsl --set-default-version 2
+```
 
-5. Once installation is complete, you will be prompted to create a new user account (and its password)
+## Finalizing
+1. To complete the initialization of your newly installed distro, launch a new instance by searching in the Start menu and launching the distro
 
-6. Most distros ship with an empty/minimal package catalog. You should regularly be updating your package catalog, and upgrading your installed packages using your distro's preferred package manager
+2. The first time a newly installed distro runs, a Console window will open, and you'll be asked to wait for a minute or two for the installation to complete
+
+3. Once installation is complete, you will be prompted to create a new user account (and its password)
+
+4. Most distros ship with an empty/minimal package catalog. You should regularly be updating your package catalog, and upgrading your installed packages using your distro's preferred package manager
 
       ```console
       sudo apt-get update && sudo apt-get upgrade
