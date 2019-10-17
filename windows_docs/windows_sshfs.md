@@ -11,12 +11,12 @@
 4. Ensure you check the box `Connect using different credentials` if your computer login password is different from Sharcnet.
 
 <p align="center">
-  <img width="400" src="img/map_network_sshfs.png">
+  <img width="500" src="img/map_network_sshfs.png">
 </p>
 
 5. You should then see the network drive in your file explorer!
 
 <p align="center">
-  <img width="400" src="img/drive_directory.png">
+  <img width="600" src="img/drive_directory.png">
 </p>
 
