@@ -60,13 +60,13 @@
 2. From the distro's page, select __Get__
 3. Once done installing, open up __Powershell__ as administrator and run (replace distro with the name of the distro you installed):
 
-```console
-wsl --set-version [Distro] 2
-```
+    ```console
+    wsl --set-version [Distro] 2
+    ```
 
-```console
-wsl --set-default-version 2
-```
+    ```console
+    wsl --set-default-version 2
+    ```
 
 ## Finalizing
 1. To complete the initialization of your newly installed distro, launch a new instance by searching in the Start menu and launching the distro
