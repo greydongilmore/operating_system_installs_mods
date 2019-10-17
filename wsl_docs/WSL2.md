@@ -41,7 +41,24 @@
     <p align="center">
       <img width="500" src="img/group_telemetry.png">
     </p>
+
+## Activate Insider Build
+1. Search for __Check for Updates__ in the Windows search menu
+2. In the new window select __Windows Insider Program__ at the bottom of the menu
+3. Select Get Started and follow the instructions, making sure you select __Fast__ when asked
+
+    <p align="center">
+      <img width="500" src="img/windows_insider_greyed.png">
+    </p>
     
+4. Once you have completed the registration you will need to check for updates and let Windows install the new insider build.
+
+    <p align="center">
+      <img width="500" src="img/windows_insider_update.png">
+    </p>
+
+5. Once done you should restart your computer
+
 ## Turn on linux subsystem feature
 1. Open Windows PowerShell as administrator and run the commands:
 
