@@ -10,7 +10,7 @@
 8. [Dcm2niix](wsl_docs/dcm2niix.md)
 9. [Freesurfer](wsl_docs/freesurfer.md)
 
-# Windows 10
+## Windows
 1.  
 2. [Obtain Windows Product Key](windows_docs/product_key.md)
 
