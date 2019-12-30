@@ -2,7 +2,7 @@
 
 ## Install Remote Desktop Extension
 
-__1.__ Navigate to <a href="https://chrome.google.com/webstore/detail/chrome-remote-desktop/gbchcmhmhahfdphkhkmpfmihenigjmpp" target="_blank">Chrome Remote Desktop Web Store</a> and install it by clicking `Add to Chrome`.
+__1.__ Navigate to <a href="https://chrome.google.com/webstore/detail/chrome-remote-desktop/gbchcmhmhahfdphkhkmpfmihenigjmpp" target="blank_">Chrome Remote Desktop Web Store</a> and install it by clicking `Add to Chrome`.
 
 __2.__ Click `Launch App` and the remote desktop app window should open.
 
