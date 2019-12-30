@@ -44,17 +44,17 @@ __2.__ Look in `/usr/share/xsessions/` for the .desktop file for your linux envi
 
 __3.__ Within the `chrome-remote-desktop-session` file enter the following (make sure to use your respective distro .desktop file):
 
-```console
+```
 exec /usr/sbin/lightdm-session "gnome-session --session=pantheon"
 ```
 
 __4.__ If running ElementayOS you will also need to add the following to the file:
 
-    ```console
-    DESKTOP_SESSION=pantheon
-    XDG_CURRENT_DESKTOP=Pantheon 
-    XDG_RUNTIME_DIR=/run/user/1000
-    ```
+```
+DESKTOP_SESSION=pantheon
+XDG_CURRENT_DESKTOP=Pantheon 
+XDG_RUNTIME_DIR=/run/user/1000
+```
 
 __5.__ Save the file and close.
 
@@ -62,68 +62,68 @@ __5.__ Save the file and close.
 
 __1.__ Stop Chrome Remote Desktop:
 
-    ```console
-    /opt/google/chrome-remote-desktop/chrome-remote-desktop --stop
-    ```
+```console
+/opt/google/chrome-remote-desktop/chrome-remote-desktop --stop
+```
 
 __2.__ Backup the original configuration:
 
-    ```console
-    sudo cp /opt/google/chrome-remote-desktop/chrome-remote-desktop /opt/google/chrome-remote-desktop/chrome-remote-    desktop.orig
-    ```
+```console
+sudo cp /opt/google/chrome-remote-desktop/chrome-remote-desktop /opt/google/chrome-remote-desktop/chrome-remote-    desktop.orig
+```
 
 __3.__ Edit the config (`chrome-remote-desktop`) file:
 
-    ```console
-    gedit /opt/google/chrome-remote-desktop/chrome-remote-desktop
-    ```
+```console
+gedit /opt/google/chrome-remote-desktop/chrome-remote-desktop
+```
     
 __4.__ Find `DEFAULT_SIZES` and update the remote desktop resolution. For example:
     
-    ```
-    DEFAULT_SIZES = "2560x1440"
-    ```
+```
+DEFAULT_SIZES = "2560x1440"
+```
 
 __5.__ For multiple displays you will need to enter in the resolution for each one:
 
-    ```
-    DEFAULT_SIZES = "2560x1440","2560x1440","2560x1440"
-    ```
+```
+DEFAULT_SIZES = "2560x1440","2560x1440","2560x1440"
+```
     
 __6.__ Determine your main display number (obtain it with `echo $DISPLAY` from terminal). Find `FIRST_X_DISPLAY_NUMBER` and set the `FIRST_X_DISPLAY_NUMBER` to the display number (Ubuntu 17.10 and lower: usually 0, Ubuntu 18.04: usually 1)
-        
-    ```console
-    echo $DISPLAY
-    ```
 
-    ```
-    FIRST_X_DISPLAY_NUMBER = 0
-    ```
+```console
+echo $DISPLAY
+```
+
+```
+FIRST_X_DISPLAY_NUMBER = 0
+```
 __7.__ Around line 425, within the definition for `get_unused_display_number()`, comment out sections that look for additional displays by adding `#` infront:
 
-    ```
-    # while os.path.exists(X_LOCK_FILE_TEMPLATE % display):
-    #   display += 1
-    ```
+```
+# while os.path.exists(X_LOCK_FILE_TEMPLATE % display):
+#   display += 1
+```
     
 __8.__ Lastly, find `launch_session()` and comment out `launch_x_server()` and `launch_x_session()` within `launch_session()`. You will then add `display = self.get_unused_display_number()` and `self.child_env["DISPLAY"] = ":%d" % display` to the definition. The function definition should look like the following:
     
-    ```
-    def launch_session(self, x_args):
-        self._init_child_env()
-        self._setup_pulseaudio()
-        self._setup_gnubby()
-        #self._launch_x_server(x_args)
-        #self._launch_x_session()
-        display = self.get_unused_display_number()
-        self.child_env["DISPLAY"] = ":%d" % display
-    ```
+```
+def launch_session(self, x_args):
+    self._init_child_env()
+    self._setup_pulseaudio()
+    self._setup_gnubby()
+    #self._launch_x_server(x_args)
+    #self._launch_x_session()
+    display = self.get_unused_display_number()
+    self.child_env["DISPLAY"] = ":%d" % display
+```
 
 __9.__ Save and exit the editor. Start Chrome Remote Desktop:
 
-    ```console
-    /opt/google/chrome-remote-desktop/chrome-remote-desktop --start
-    ```
+```console
+/opt/google/chrome-remote-desktop/chrome-remote-desktop --start
+```
 
 ## Launch Remote Desktop
 
