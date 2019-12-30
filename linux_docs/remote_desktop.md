@@ -10,43 +10,43 @@ __2.__ Click `Launch App` and the remote desktop app window should open.
 
 __1.__ You will now need to get the `.deb` for remote desktop with the following command in terminal:
 
-    ```console
-    wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
-    ```
+```console
+wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
+```
 
 __2.__ Then install it by running:
 
-    ```console
-    sudo apt install ./chrome-remote-desktop_current_amd64.deb
-    ```
+```console
+sudo apt install ./chrome-remote-desktop_current_amd64.deb
+```
 
 __3.__ If the initial installation attempt will fail, simply run `sudo apt install -f` to fix the missing dependencies and to complete the installation.
 
-    ```console
-    sudo apt-get install -f
-    ```
+```console
+sudo apt-get install -f
+```
     
 __4.__ You will need to add yourself to the chrome-remote-desktop group then reboot for the changes to take effect.
 
-    ```console
-    sudo usermod -a -G chrome-remote-desktop $USER
-    sudo reboot
-    ```
+```console
+sudo usermod -a -G chrome-remote-desktop $USER
+sudo reboot
+```
 ## Create Session File
 
 __1.__ You will need to create a remote desktop session file in your home directory:
 
-    ```console
-    gedit ~/.chrome-remote-desktop-session
-    ```
+```console
+gedit ~/.chrome-remote-desktop-session
+```
 
 __2.__ Look in `/usr/share/xsessions/` for the .desktop file for your linux environment. For example, ElementaryOS has a file named `Pantheon` with the following command: `gnome-session --session=pantheon`.
 
 __3.__ Within the `chrome-remote-desktop-session` file enter the following (make sure to use your respective distro .desktop file):
 
-    ```console
-    exec /usr/sbin/lightdm-session "gnome-session --session=pantheon"
-    ```
+```console
+exec /usr/sbin/lightdm-session "gnome-session --session=pantheon"
+```
 
 __4.__ If running ElementayOS you will also need to add the following to the file:
 
