@@ -5,7 +5,7 @@
 Obtain the newest version of [NiftyReg](https://sourceforge.net/projects/niftyreg/files/latest/download) or by running the following:
 
 ```console
-mkdir ~/code/niftyreg_source
+mkdir -p ~/code/niftyreg_source
 cd ~/code/niftyreg_source
 git clone https://github.com/SuperElastix/niftyreg.git
 ```
