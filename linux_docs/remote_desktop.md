@@ -69,7 +69,7 @@ __1.__ Stop Chrome Remote Desktop:
 __2.__ Backup the original configuration:
 
 ```console
-sudo cp /opt/google/chrome-remote-desktop/chrome-remote-desktop /opt/google/chrome-remote-desktop/chrome-remote-    desktop.orig
+sudo cp /opt/google/chrome-remote-desktop/chrome-remote-desktop /opt/google/chrome-remote-desktop/chrome-remote-desktop.orig
 ```
 
 __3.__ Edit the config (`chrome-remote-desktop`) file:
@@ -87,7 +87,7 @@ DEFAULT_SIZES = "2560x1440"
 __5.__ For multiple displays you will need to enter in the resolution for each one:
 
 ```
-DEFAULT_SIZES = "2560x1440","2560x1440","2560x1440"
+DEFAULT_SIZES = "2560x1440,2560x1440,2560x1440"
 ```
     
 __6.__ Determine your main display number (obtain it with `echo $DISPLAY` from terminal). Find `FIRST_X_DISPLAY_NUMBER` and set the `FIRST_X_DISPLAY_NUMBER` to the display number (Ubuntu 17.10 and lower: usually 0, Ubuntu 18.04: usually 1)
