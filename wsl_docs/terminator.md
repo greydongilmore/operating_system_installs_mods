@@ -85,16 +85,22 @@ The next thing is to change the default Terminator colorscheme to Solarized Dark
 curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
 sudo apt install nodejs
 ```
-You need to first run this line to chnage directory access:
-
-```console
-sudo chown -R [your_username] /home/[your_username]/.config/configstore
-```
 
 Once you have installed Node.js you can then run the base-16builder install:
 
 ```console
 sudo npm install --global base16-builder
+```
+
+You need to change directory access to the `configstore` directory just created:
+
+```console
+sudo chown -R [your_username] /home/[your_username]/.config/configstore
+```
+
+Now you need to apply the scheme to the terminator config file:
+
+```console
 mkdir -p .config/terminator
 base16-builder -s solarized -t terminator -b dark > .config/terminator/config
 ```
