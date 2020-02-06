@@ -1,5 +1,33 @@
 # SSHFS Desktop Application
 
+## Setup fuse
+
+1. Run the following in a terminal:
+
+```console
+modprobe fuse
+```
+
+2. Create a FUSE usergroup and add yourself to the group
+
+```console
+usermod -a -G fuse $USER
+```
+
+3. Create a set of ssh-keys:
+
+```console
+ssh-keygen -t dsa
+```
+
+4. Transport the key to the remote server:
+
+```console
+ssh-copy-id -i .ssh/id_rsa.pub user@example.com
+```
+
+5. Now when you run `sshfs` you will not need to enter your password.
+
 ## Create Shell Script
 
 1. Run the following command to create an empty shell script:
