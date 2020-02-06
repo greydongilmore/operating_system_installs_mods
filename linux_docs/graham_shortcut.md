@@ -13,11 +13,11 @@
 
     ```
     #!/bin/bash
-    mount_dir = /home/greydon/graham
-    if (! mountpoint -q mount_dir ); then
-        sshfs gilmoreg@graham.computecanada.ca:/home/[USER]/ mount_dir -o   ServerAliveInterval=15,ServerAliveCountMax=3,Compression=no,follow_symlinks
+    mount_dir="/path/to/mount/directory"
+    if (! mountpoint -q $mount_dir); then
+        sshfs user@example.com:/home/[user]/ $mount_dir -o   ServerAliveInterval=15,ServerAliveCountMax=3,Compression=no,follow_symlinks
     else
-        umount mount_dir
+        umount $mount_dir
     fi
     ```
 
