@@ -15,16 +15,16 @@ sudo groupadd fuse
 sudo usermod -a -G fuse $USER
 ```
 
-3. Create a set of ssh-keys:
+3. Create a set of ssh-keys, press enter when asked to name the file (blank) and press enter when asked to enter a passphrase (blank):
 
 ```console
-ssh-keygen -t dsa
+ssh-keygen -t rsa
 ```
 
 4. Transport the key to the remote server:
 
 ```console
-ssh-copy-id -i .ssh/id_dsa.pub user@example.com
+ssh-copy-id -i .ssh/id_rsa.pub user@example.com
 ```
 
 5. Now when you run `sshfs` you will not need to enter your password.
