@@ -5,8 +5,9 @@
 1. Run the following command to create an empty shell script:
 
     ```console
-    gedit ~/Documents/sshfs_mount.sh
+    touch +x ~/Documents/sshfs_mount.sh
     chmod +x ~/Documents/sshfs_mount.sh
+    gedit ~/Documents/sshfs_mount.sh
     ```
 
 2. Enter the command you normally run to connect to the remote server, change `mount_dir` to match your local mount location:
