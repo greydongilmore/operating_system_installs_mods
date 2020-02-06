@@ -24,7 +24,7 @@ ssh-keygen -t dsa
 4. Transport the key to the remote server:
 
 ```console
-ssh-copy-id -i .ssh/id_rsa.pub user@example.com
+ssh-copy-id -i .ssh/id_dsa.pub user@example.com
 ```
 
 5. Now when you run `sshfs` you will not need to enter your password.
