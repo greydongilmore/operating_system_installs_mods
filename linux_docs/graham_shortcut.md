@@ -29,8 +29,9 @@
 1. Run the following command to create an empty shell script:
 
     ```console
-    gedit ~/Documents/sshfs_mount.desktop
+    touch ~/Documents/sshfs_mount.desktop
     chmod +x ~/Documents/sshfs_mount.desktop
+    gedit ~/Documents/sshfs_mount.desktop
     ```
 
 2. Paste the following into the document, ensure you update the brackets:
