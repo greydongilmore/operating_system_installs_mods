@@ -4,28 +4,28 @@
 
 1. Run the following in a terminal:
 
-```console
-modprobe fuse
-```
+    ```console
+    modprobe fuse
+    ```
 
 2. Create a FUSE usergroup and add yourself to the group
 
-```console
-sudo groupadd fuse
-sudo usermod -a -G fuse $USER
-```
+    ```console
+    sudo groupadd fuse
+    sudo usermod -a -G fuse $USER
+    ```
 
 3. Create a set of ssh-keys, press enter when asked to name the file (blank) and press enter when asked to enter a passphrase (blank):
 
-```console
-ssh-keygen -t rsa
-```
+    ```console
+    ssh-keygen -t rsa
+    ```
 
 4. Transport the key to the remote server:
 
-```console
-ssh-copy-id -i .ssh/id_rsa.pub user@example.com
-```
+    ```console
+    ssh-copy-id -i .ssh/id_rsa.pub user@example.com
+    ```
 
 5. Now when you run `sshfs` you will not need to enter your password.
 
