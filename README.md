@@ -19,3 +19,4 @@
 # Ubuntu 18.04
 1. [Adding custom applications launch icon to favorites](linux_docs/app_icon.md)
 2. [Google Remote Desktop](linux_docs/remote_desktop.md)
+3. [Desktop launcher to connect remote server (e.g. Sharcnet)](linux_docs/graham_shortcut.md)
