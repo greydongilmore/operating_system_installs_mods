@@ -11,7 +11,8 @@ modprobe fuse
 2. Create a FUSE usergroup and add yourself to the group
 
 ```console
-usermod -a -G fuse $USER
+sudo groupadd fuse
+sudo usermod -a -G fuse $USER
 ```
 
 3. Create a set of ssh-keys:
