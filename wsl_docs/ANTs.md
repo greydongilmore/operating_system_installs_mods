@@ -27,16 +27,16 @@ ccmake ~/code/ANTs
 
 Hit __'c'__ to do an initial configuration. CMake will do some checking and then present options for review. Hit __'c'__ again to do another round of configuration. If there are no errors, you're ready to generate the make files by pressing __'g'__.
 
-Now you are back at the command line, it's time to compile:
-
-```console
-make
-```
-
-This compiles in the most resource-efficient manner. To save time, you can use multiple threads, for example:
+Now you are back at the command line, it's time to compile. This compiles in the most resource-efficient manner. To save time, you can use multiple threads, for example:
 
 ```console
 make -j 2
+```
+Finally, install the software:
+
+```console
+cd ~/bin/ants/ANTS-build
+sudo make -j 2 install
 ```
 
 ## Post-install Configuration
