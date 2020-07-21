@@ -5,8 +5,8 @@
 Obtain the newest version of [NiftyReg](https://sourceforge.net/projects/niftyreg/files/latest/download) or by running the following:
 
 ```console
-mkdir -p ~/code/niftyreg_source
-cd ~/code/niftyreg_source
+mkdir -p ~/Downloads/code/niftyreg_source
+cd ~/Downloads/code/niftyreg_source
 git clone https://github.com/SuperElastix/niftyreg.git
 ```
 
@@ -17,9 +17,9 @@ Make the build and install directories.
 The default install location is ```/usr/local```, which falls on your PATH. This is the easiest location to install. If you want to install somwhere else then specify the path in the ```CMAKE_INSTALL_PREFIX``` variable.
 
 ```console
-mkdir -p ~/bin/niftyreg
-cd ~/bin/niftyreg
-ccmake ~/code/niftyreg_source/niftyreg
+mkdir -p ~/Downloads/bin/niftyreg
+cd ~/Downloads/bin/niftyreg
+ccmake ~/Downloads/code/niftyreg_source/niftyreg
 ```
 
 The following options will be displayed, ensure you change ```CMAKE_INSTALL_PREFIX``` variable to the install directory path if you don't want to use default:
